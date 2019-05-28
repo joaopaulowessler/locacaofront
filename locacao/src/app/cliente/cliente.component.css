@@ -1,0 +1,39 @@
+#cardTitulo {
+    text-align: center;
+    font-size: 30px;
+    background: #87CEEB;
+    margin-bottom: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#cardCorpo {
+    text-align: center;
+    background: #F0F8FF;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 525px;
+    ;
+}
+
+.inputCliente {
+    font-size: 20px;
+    width: 60%;
+}
+
+#botaoSalvar {
+    margin-top: 40px;
+    font-size: 25px;
+    background: #87CEEB;
+    width: 60%;
+    height: 50px;
+}
+
+#botaoRetornar {
+    margin-top: 5px;
+    font-size: 25px;
+    background: #B0C4DE;
+    width: 60%;
+    height: 50px;
+}

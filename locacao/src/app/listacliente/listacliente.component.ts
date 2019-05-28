@@ -8,10 +8,10 @@ import { Router, NavigationStart } from '@angular/router';
 })
 export class ListaclienteComponent implements OnInit {
 
-  constructor(public navCtrl : NavigationStart) { }
+  constructor(public router : Router) { }
 
   teste(){
-      
+    this.router.navigate(['cliente']);
   }
 
   ngOnInit() {

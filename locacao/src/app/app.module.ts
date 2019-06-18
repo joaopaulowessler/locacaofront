@@ -11,23 +11,33 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
+import {MatListModule} from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+import { ListalocComponent } from './listaloc/listaloc.component';
+import { LocacaoComponent } from './locacao/locacao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-    ListaclienteComponent
+    ListaclienteComponent,
+    ListalocComponent,
+    LocacaoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    MatIconModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
     <mat-card id="cardTitulo">Cadastro de Cliente</mat-card>
 
     <mat-card id="cardCorpo">
-        <mat-form-field class="inputCliente" style="margin-top: 40px;">
+        <mat-form-field class="inputCliente" style="margin-top: 80px;">
             <input id="nomeCliente" [(ngModel)]="pessoa.nome" matInput placeholder="Nome">
         </mat-form-field>
         <br>
@@ -18,7 +18,10 @@
             <input id="enderecoCliente" [(ngModel)]="pessoa.endereco" matInput placeholder="Endereço">
         </mat-form-field>
         <br>
-        <button mat-button id="botaoSalvar" (click)="salvar()">Salvar</button>
-        <button mat-button id="botaoRetornar">Retornar</button>
+
+        <div id="divBotao">
+            <button mat-button id="botaoSalvar" (click)="salvar()">Salvar</button>
+            <button mat-button id="botaoRetornar" (click)="retornar()">Retornar</button>
+        </div>
     </mat-card>
 </div>

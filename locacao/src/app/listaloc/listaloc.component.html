@@ -1,0 +1,59 @@
+<div id="principal">
+  <mat-card id="cardTitulo">
+      Locações Cadastradas - {{nome}}
+  </mat-card>
+
+  <mat-card id="cardLista">
+      <div id="divLista">
+          <mat-nav-list>
+              <mat-list-item style="height: 70px;" class="itemLista" *ngFor="let locacao of locacao" [ngStyle]="{'background-color': locacao.cor}">
+                  <div class="divItemLista" style="text-align: left;">
+                      <table>
+                          <tr>
+                              <td style="text-align: right;">
+                                  <span class="tituloItem">Carro:</span>
+                              </td>
+                              <td style="width: 250px;">
+                                  <span class="dadosItem">{{locacao.carro}}</span>
+                              </td>
+                              <td style="text-align: right;">
+                                  <span class="tituloItem">data:</span>
+                              </td>
+                              <td style="width: 200px;">
+                                  <span class="dadosItem">{{locacao.data}}</span>
+                              </td>
+                              <td rowspan="2" style="width: 100px;">
+                                  <button mat-icon-button (click)="excluir(locacao._id)">
+                                      <mat-icon>delete</mat-icon>
+                                  </button>
+                                  <button mat-icon-button (click)="concluir(locacao._id)">
+                                      <mat-icon>done</mat-icon>
+                                  </button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: right;">
+                                  <span class="tituloItem">Valor:</span>
+                              </td>
+                              <td>
+                                  <span class="dadosItem">{{locacao.valor}}</span>
+                              </td>
+                              <td style="text-align: right; width: 150px;">
+                                  <span class="tituloItem">Valor Dólar:</span>
+                              </td>
+                              <td>
+                                  <span class="dadosItem">{{locacao.valor_dolar}}</span>
+                              </td>
+                          </tr>
+                      </table>
+                  </div>
+              </mat-list-item>
+          </mat-nav-list>
+      </div>
+
+      <div id="divBotao">
+          <button mat-button id="botaoIncluir" (click)="incluir(id,nome)">Incluir</button>
+          <button mat-button id="botaoRetornar" (click)="retornar()">Retornar</button>
+      </div>
+  </mat-card>
+</div>

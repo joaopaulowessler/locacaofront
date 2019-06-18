@@ -1,3 +1,64 @@
-<p>
-    <button mat-button (click)="teste()">GO</button>
-</p>
+<div id="principal">
+    <mat-card id="cardTitulo">
+        Clientes Cadastrados
+    </mat-card>
+
+    <mat-card id="cardLista">
+        <div id="divLista">
+            <mat-nav-list>
+                <mat-list-item style="height: 70px;" class="itemLista" *ngFor="let pessoa of pessoa">
+                    <div class="divItemLista" style="text-align: left;">
+                        <table>
+                            <tr>
+                                <td style="text-align: right;">
+                                    <span class="tituloItem">Nome:</span>
+                                </td>
+                                <td style="width: 380px;">
+                                    <span class="dadosItem">{{pessoa.nome}}</span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span class="tituloItem">CPF:</span>
+                                </td>
+                                <td style="width: 200px;">
+                                    <span class="dadosItem">{{pessoa.cpf}}</span>
+                                </td>
+                                <td rowspan="2" style="width: 150px;">
+                                    <button mat-icon-button (click)="excluir(pessoa._id)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+
+                                    <button mat-icon-button (click)="alterar(pessoa._id)">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+
+                                    <button mat-icon-button (click)="locacao(pessoa._id, pessoa.nome)">
+                                        <mat-icon>drive_eta</mat-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">
+                                    <span class="tituloItem">Endereço:</span>
+                                </td>
+                                <td>
+                                    <span class="dadosItem">{{pessoa.endereco}}</span>
+                                </td>
+                                <td style="text-align: right;">
+                                    <span class="tituloItem">Telefone:</span>
+                                </td>
+                                <td>
+                                    <span class="dadosItem">{{pessoa.telefone}}</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+
+        <div id="divBotao">
+            <button mat-button id="botaoIncluir" (click)="incluir()">Incluir</button>
+            <button mat-button id="botaoExportar" (click)="exportar()">Exportar</button>
+        </div>
+    </mat-card>
+</div>
